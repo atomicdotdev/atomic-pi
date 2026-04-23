@@ -1,0 +1,43 @@
+{
+  "name": "atomic-pi",
+  "version": "0.1.0",
+  "description": "Atomic VCS integration for Pi — automatic turn recording with AI provenance, intent tracking, and knowledge graph skills.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "atomic",
+    "pi",
+    "pi-package",
+    "vcs",
+    "provenance",
+    "ai-agent",
+    "version-control"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atomicdotdev/atomic-pi"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ],
+    "skills": [
+      "./skills"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "files": [
+    "extensions/",
+    "agents/",
+    "skills/",
+    "install.js",
+    "install.sh"
+  ],
+  "bin": {
+    "atomic-pi": "install.js"
+  },
+  "scripts": {
+    "postinstall": "node install.js --silent"
+  }
+}
