@@ -32,6 +32,10 @@ const LINKS = [
     dst: "skills/atomic-vault/SKILL.md",
   },
   {
+    src: "skills/atomic-vcs/SKILL.md",
+    dst: "skills/atomic-vcs/SKILL.md",
+  },
+  {
     src: "skills/code-intelligence/SKILL.md",
     dst: "skills/code-intelligence/SKILL.md",
   },

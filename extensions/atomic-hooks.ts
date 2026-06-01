@@ -7,8 +7,10 @@
  *
  * 1 session = 1 view. Each turn records with provenance.
  *
- * Installed by: atomic agent enable --agent pi
- * Remove with:  atomic agent disable --agent pi
+ * Installed by: atomic-pi's install (`pi install` or install.sh), which
+ *               symlinks this extension into ~/.pi/agent/extensions/.
+ * Remove with:  node install.js --uninstall (or remove the symlink from
+ *               ~/.pi/agent/extensions/).
  */
 
 import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";

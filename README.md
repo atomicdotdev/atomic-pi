@@ -10,7 +10,7 @@ Automatic turn recording with AI provenance, intent tracking, and knowledge grap
 - **Every turn records with provenance** — model, vendor, session, turn number, timing
 - **Tool executions tracked** — reads, edits, bash calls captured in a causal decision graph
 - **Intent workflow** — agent prompt guides problem-first development with vault intents
-- **Skills on demand** — `@atomic-vault` and `@code-intelligence` loaded when needed
+- **Skills on demand** — `@atomic-vault`, `@atomic-vcs`, and `@code-intelligence` loaded when needed
 
 ## Install
 
@@ -80,6 +80,7 @@ atomic agent attest
 | `extensions/atomic-hooks.ts` | Pi extension — session lifecycle, turn recording, tool tracking |
 | `agents/atomic.md` | Agent prompt — intent-per-turn workflow |
 | `skills/atomic-vault/SKILL.md` | Vault reference (goals, intents, memory) |
+| `skills/atomic-vcs/SKILL.md` | VCS inspection reference (status, log, change, diff) |
 | `skills/code-intelligence/SKILL.md` | Knowledge graph query patterns |
 | `install.js` | Links agent + skills + extension into `~/.config/pi/` |
 | `install.sh` | Development install (symlinks from local checkout) |
