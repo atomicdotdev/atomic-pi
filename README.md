@@ -4,6 +4,8 @@
 
 Automatic turn recording with AI provenance, intent tracking, and knowledge graph skills.
 
+> **Definitive source:** this repository lives on Atomic storage at `https://atomic.atomic.storage/workspaces/oss/projects/atomic-pi/code`. The GitHub repo is a mirror.
+
 ## What it does
 
 - **1 session = 1 view** — a draft view is created automatically when you start Pi
@@ -14,27 +16,30 @@ Automatic turn recording with AI provenance, intent tracking, and knowledge grap
 
 ## Install
 
-### Recommended
+### Quick start
+
+Requires the [Atomic VCS](https://atomic.dev) CLI on your PATH. Then:
 
 ```bash
-pi install /path/to/atomic-pi
+atomic agent enable --agent pi
 ```
 
-Or from npm (once published):
+The enable command syncs the package from Atomic storage and installs the extension, agent prompt, and skills into `~/.config/pi/`.
 
-```bash
-pi install npm:atomic-pi
-```
+### Development install
 
-### From source (development)
+From a local checkout:
 
 ```bash
 git clone https://github.com/atomicdotdev/atomic-pi
 cd atomic-pi
+atomic agent enable --agent pi --from .
+
+# or the legacy script path:
 ./install.sh
 ```
 
-This registers the package with Pi via `pi install`. Edit files in the repo — changes apply immediately (run `/reload` in Pi for extension changes).
+`./install.sh` registers the package with Pi via `pi install`. Edit files in the repo — changes apply immediately (run `/reload` in Pi for extension changes).
 
 ## Prerequisites
 
@@ -88,13 +93,13 @@ atomic agent attest
 ## Uninstall
 
 ```bash
-pi remove /path/to/atomic-pi
+atomic agent disable --agent pi
 ```
 
-Or if installed via npm:
+For a development checkout registered via `pi install`:
 
 ```bash
-pi remove npm:atomic-pi
+pi remove /path/to/atomic-pi
 ```
 
 ## Architecture
