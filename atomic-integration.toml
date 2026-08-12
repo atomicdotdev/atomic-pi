@@ -8,17 +8,9 @@ atomic = ">=0.11.0"
 [skills-source]
 package = "atomic-skills"
 
-[[skill]]
-src = "skills/atomic-vault/SKILL.md"
-dst = "~/.pi/agent/skills/atomic-vault/SKILL.md"
-
-[[skill]]
-src = "skills/atomic-vcs/SKILL.md"
-dst = "~/.pi/agent/skills/atomic-vcs/SKILL.md"
-
-[[skill]]
-src = "skills/code-intelligence/SKILL.md"
-dst = "~/.pi/agent/skills/code-intelligence/SKILL.md"
+[skills]
+install = "all"
+dst_pattern = "~/.pi/agent/skills/{name}/SKILL.md"
 
 [[repo-file]]
 src = "AGENTS.md"
