@@ -5,18 +5,30 @@ version = "1.0.0"
 [requires]
 atomic = ">=0.11.0"
 
-[[file]]
-src = "extensions/atomic-hooks.ts"
-dst = "~/.pi/agent/extensions/atomic-hooks.ts"
+[skills-source]
+package = "atomic-skills"
 
-[[file]]
+[[skill]]
 src = "skills/atomic-vault/SKILL.md"
 dst = "~/.pi/agent/skills/atomic-vault/SKILL.md"
 
-[[file]]
+[[skill]]
 src = "skills/atomic-vcs/SKILL.md"
 dst = "~/.pi/agent/skills/atomic-vcs/SKILL.md"
 
-[[file]]
+[[skill]]
 src = "skills/code-intelligence/SKILL.md"
 dst = "~/.pi/agent/skills/code-intelligence/SKILL.md"
+
+[[repo-file]]
+src = "AGENTS.md"
+dst = "AGENTS.md"
+
+[agent-definition]
+src = "agents/atomic.md.frontmatter"
+body_from = "atomic-skills:AGENTS.md"
+slot = "~/.pi/agent/atomic.md"
+
+[[file]]
+src = "extensions/atomic-hooks.ts"
+dst = "~/.pi/agent/extensions/atomic-hooks.ts"
